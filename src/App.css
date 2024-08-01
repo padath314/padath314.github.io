@@ -84,9 +84,9 @@ p.danger {
 
 
 /************ Navbar Css ************/
+/************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
-  display: flex;
   position: fixed;
   width: 100%;
   top: 0;
@@ -97,16 +97,8 @@ nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
-
-nav.navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
 nav.navbar a.navbar-brand {
-    flex: 1;
+    width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -241,6 +233,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
+
+/************ Banner Css ************/
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
@@ -307,6 +301,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         transform: translateY(-20px);
     }
 }
+
+/***********Coding***********/
+.coding{
+  display: flex;
+}
+
+.coding-container{
+  display: flex;
+}
+
+.coding img {
+  width:300px;
+  animation: updown 3s linear infinite;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }

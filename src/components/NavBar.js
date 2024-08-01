@@ -30,16 +30,17 @@ export const NavBar = () => {
 
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
-            <Container>
-                <Navbar.Brand href="#home">Susan Varghese Padath</Navbar.Brand>
+            <Container className="all-navbar-elements" >
+            <Navbar.Brand href="/"> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggle-icon"></span>
                 </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse   id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="#home" className={ activeLink ==='home"'? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
                         <Nav.Link href="#skills" className={ activeLink ==='skills'? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('skills')}>Link</Nav.Link>
                         <Nav.Link href="#projects" className={ activeLink ==='projects'? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('projects')}>About</Nav.Link>
+                        
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
