@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 import instagram from '../assets/img/instagram.png';
 import github from '../assets/img/github.png';
@@ -29,17 +30,17 @@ export const NavBar = () => {
 
 
     return (
-        <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
-            <Container className="all-navbar-elements" >
+        <Navbar className={scrolled ? "scrolled": ""}>
+            <Container>
             <Navbar.Brand href="/"> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggle-icon"></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse   id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home" className={ activeLink ==='home"'? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
-                        <Nav.Link href="#skills" className={ activeLink ==='skills'? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('skills')}>Link</Nav.Link>
-                        <Nav.Link href="#projects" className={ activeLink ==='projects'? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('projects')}>About</Nav.Link>
+                        <Nav.Link as={Link} to="/" className={ activeLink ==='home"'? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>     
+                        <Nav.Link as={Link} to="/blog" className={ activeLink ==='blog'? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('blog')}>Blog</Nav.Link>
+                        <Nav.Link as={Link} to="/projects" className={activeLink === 'projects' ? 'active-navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                         
                     </Nav>
                     <span className="navbar-text">

@@ -68,6 +68,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 @media (min-width:1700px) {
+
 	main .container {
 		max-width: 100%;
 		padding: 0 150px;
@@ -85,6 +86,17 @@ p.danger {
 
 /************ Navbar Css ************/
 /************ Navbar Css ************/
+.navbar {
+  overflow: hidden;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      display: block;
+  }
+}
+
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -118,7 +130,7 @@ span.navbar-text {
 }
 .social-icon {
     display: inline-block;
-    margin-left: 14px;
+    margin-right: 14px;
 }
 .social-icon a {
     width: 42px;
@@ -238,8 +250,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  padding: 100px 0 100px 0;
+  background-image: url('./assets/img/banner-bg.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -269,24 +281,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 96%;
 }
-.banner button {
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  margin-top: 60px;
-  letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
-}
-.banner button svg {
-  font-size: 25px;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
-  line-height: 1;
-}
-.banner button:hover svg {
-  margin-left: 25px;
-}
+
 .banner img {
   animation: updown 3s linear infinite;
 }
@@ -303,16 +298,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /***********Coding***********/
-.coding{
-  display: flex;
-}
+/***********Coding***********/
 
-.coding-container{
-  display: flex;
-}
 
 .coding img {
-  width:300px;
+  width:350px;
   animation: updown 3s linear infinite;
 }
 
@@ -327,6 +317,65 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         transform: translateY(-20px);
     }
 }
+
+.coding li {
+  list-style: none;
+}
+
+.coding .projects-link {
+  color: white; /* Text color inside the button */
+  text-decoration: none;
+}
+
+.coding button {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  border: 2px solid white; /* Black border */
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.coding button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.coding button:hover svg {
+  margin-left: 25px;
+}
+
+/***********Vlogging***********/
+/***********Vlogging***********/
+
+.youtube-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 10px;
+  background: #000;
+}
+
+.youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/***********Education***********/
+/***********Education***********/
+
+
 
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;

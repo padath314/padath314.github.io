@@ -1,0 +1,155 @@
+/************ Custom Font ************/
+@font-face {
+	font-family: Centra;
+	src: url('../../assets/font/CentraNo2-Bold.ttf');
+	font-weight: 700;
+}
+@font-face {
+	font-family: Centra;
+	src: url('../../assets/font/CentraNo2-Medium.ttf');
+	font-weight: 500;
+}
+@font-face {
+	font-family: Centra;
+	src: url('../../assets/font/CentraNo2-Book.ttf');
+	font-weight: 400;
+}
+
+/************ Default Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+p.success {
+	color: green;
+}
+
+p.danger {
+	color: red;
+}
+
+
+/************Project***********/
+
+.project-page {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.project-box {
+    position: relative;
+    background-color: #2a3853;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 40%;
+    height: 400px;
+    margin: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+  
+  .project-content h2 {
+    margin: 0;
+  }
+  
+  .project-content p {
+    margin: 10px 0;
+  }
+  
+  .project-content span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .project-box:hover .overlay {
+    opacity: 1;
+  }
+  
+  .github-link {
+    color: #ffbb00;
+    text-decoration:solid;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    gap: 20px;
+  }

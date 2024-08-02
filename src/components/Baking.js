@@ -10,7 +10,7 @@ export const Baking = () => {
             
             <Col>
             <div>
-                <h1>Coding</h1>
+                <h1>Baking</h1>
                 <p>My coding journey started in school</p>
             </div>
             </Col>
