@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import Projects from './components/pages/Projects';
 import Blog from './components/pages/Blog';
+import BlogEntryPage from './components/pages/BlogEntryPage';
+
+import { initializeApp } from 'firebase/app';
+
 
 import reportWebVitals from './reportWebVitals';
 import {
@@ -23,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog />,
+  },
+  {
+    path: "/blog/:id",
+    element:<BlogEntryPage/>
   },
 ]);
 
