@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import cong from "../../configuration"; 
-import { getDatabase, ref, onValue } from "firebase/database";
 import { NavBar } from '../NavBar';
-//import BlogEntry from './BlogEntry'; // Ensure correct path
 import './Blog.css';
 
 
@@ -13,23 +10,19 @@ const Blog = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-
-    const database = getDatabase(cong);
-    const collectionRef = ref(database, "Blogs");
-    
-    const fetchData = () => {
-      onValue(collectionRef, (snapshot) => {
-        const dataItem = snapshot.val();
-        if(dataItem)
-        {
-          const displayItem = Object.values(dataItem);
-          setData(displayItem);
+    fetch('/blogs/blog-entries.json')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Fetched data:', data);
+        if (Array.isArray(data.Blogs)) {
+          setData(data.Blogs);
+        } else {
+          console.error('Fetched data is not an array:', data.Blogs);
         }
-      });
-    };
-
-    fetchData();
+      })
+      .catch(error => console.error('Error fetching data:', error));
   }, []);
+
 
   return (
     <section>

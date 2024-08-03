@@ -1,0 +1,16 @@
+{
+  "Blogs": [
+    {
+      "Title": "Blog Post 1",
+      "Date": "2024-08-04",
+      "Image": "school.jpg",
+      "Body": "This is the body of blog post 1."
+    },
+    {
+      "Title": "Blog Post 2",
+      "Date": "2024-08-05",
+      "Image": "school.jpg",
+      "Body": "This is the body of blog post 2."
+    }
+  ]
+}
